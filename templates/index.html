@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andres Santafe - Hola Mundo desde Docker</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        /* Contenedor principal */
+        .container {
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* Encabezado */
+        h1 {
+            font-size: 2em;
+            color: #bb86fc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Lista de elementos */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Estilos de cada elemento */
+        li {
+            font-size: 1.1em;
+            padding: 15px;
+            background-color: #1f1f1f;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            width: 220px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+            text-align: center;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            background-color: #333333;
+        }
+
+        /* Texto dentro de cada elemento */
+        li span {
+            font-weight: bold;
+            color: #03dac5;
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados de Andres Santafe - Hola Mundo desde Docker</h1>
+        <ul>
+            {% for lang, message in results.items() %}
+                <li>
+                    <span>{{ lang }}:</span> {{ message }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
